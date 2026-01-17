@@ -23,9 +23,13 @@ LogAnalyzer:
         Wymaga przynajmniej wersji Docker 20.0 (na komputerze autora v28.1.1)
         Wymaga przynajmniej Docker Compose 2.0 (na komputerze autora v2.35.1)
 
+        Kod należy otworzyć w Visual Studio
+
     Budowanie usługi:
 
-            docker-compose up --build --scale worker=3 (liczba workerów jest skalowalna, 3 jest przykładową cyfrą)
+        W terminalu należy wpisać
+            docker-compose up --build --scale worker=3
+            (liczba workerów jest skalowalna, 3 jest przykładową cyfrą)
 
         Aby dostać się do usługi należy w przeglądarce wejść na http://localhost:8000/
 
