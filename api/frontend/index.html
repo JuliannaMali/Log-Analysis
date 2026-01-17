@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Analyzer Dashboard</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+    
+</head>
+
+<body>
+    <h1>Log Analyzer Dashboard</h1>
+    
+    <h2>Wklej logi</h2>
+    <textarea id="logInput" placeholder="INFO User logged in&#10;WARNING Disk space low&#10;ERROR Cannot connect to database&#10;INFO Request finished"></textarea><br>
+    <div class="filtr">
+        <button onclick="sendLog()">Wyślij logi</button>
+        <button id="demo-btn">Generuj Logs</button>
+    </div>
+    <p id="task-info"></p>
+    
+    <h2>Status tasku</h2>
+    <div class="filtr">
+        <input type="text" id="taskId" placeholder="Wpisz Task ID">
+        <button onclick="getStatus()">Sprawdź status</button>
+    </div>
+    <pre id="statusOutput"></pre>
+    
+    <h2>Filtrowanie</h2>
+    <div class="filtr">
+        <input type="text" id="filterLevel" placeholder="Poziom (ERROR, WARNING, INFO)">
+        <input type="text" id="filterKeyword" placeholder="Słowo kluczowe">
+    </div>
+    <button onclick="filterLog()" class="center">Filtruj</button>
+    <p id="filterCount"></p>
+    <pre id="filterOutput"></pre>
+    
+    <h2>Eksport CSV</h2>
+    <button onclick="exportCSV()" class="center">Pobierz CSV</button>
+
+
+    <script src="/frontend/script.js"></script>
+</body>
+</html>

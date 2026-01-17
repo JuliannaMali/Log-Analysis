@@ -51,11 +51,15 @@ while True:
 
     errors, warnings, infos, words = process_chunk(lines)
 
+    r.rpush(f"task:{task_id}:logs", *lines)
+
     with r.pipeline() as pipe:
         pipe.hincrby(f"task:{task_id}", "errors", errors)
         pipe.hincrby(f"task:{task_id}", "warnings", warnings)
         pipe.hincrby(f"task:{task_id}", "infos", infos)
         pipe.hincrby(f"task:{task_id}", "processed_chunks", 1)
+
+        pipe.hincrby(f"task:{task_id}:workers", WORKER_ID, 1)
 
         current_words = json.loads(r.hget(f"task:{task_id}", "words"))
         for w, c in words.items():

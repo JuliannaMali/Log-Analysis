@@ -1,0 +1,78 @@
+body{
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+
+h2{
+    margin: 10px auto 20px auto;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(208, 159, 231);
+}
+textarea{
+    display: block;
+    margin: 20px auto 10px auto;
+    padding: 20px;
+    width: 50%;
+    height: 150px;
+    border-radius: 30px;
+}
+
+button{
+    border-radius: 20px;
+    background-color: rgb(208, 159, 231);
+    border: 2px solid rgb(114, 82, 129);
+}
+
+.filtr{
+    margin: 0px auto 10px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+}
+
+#filterLevel{
+    padding: 5px;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+#filterKeyword{
+    padding: 5px;
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+pre {
+    display: block;
+    margin: 10px auto;
+    width: 60%;
+    background: rgb(198, 219, 238);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.center {
+    display: block; 
+    margin: 10px auto; 
+    border-radius: 20px;
+    background-color: rgb(208, 159, 231);
+    border: 2px solid rgb(114, 82, 129);
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+#taskId{
+    border-radius: 10px;
+    padding: 5px
+}
